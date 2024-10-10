@@ -1,4 +1,4 @@
-package UD1.exercicios.parejas;
+package ud1.exercicios.parejas;
 
 import java.util.Scanner;
 

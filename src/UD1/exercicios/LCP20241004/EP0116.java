@@ -1,4 +1,4 @@
-package UD1.exercicios.LCP20241004;
+package ud1.exercicios.lcp20241004;
 
 import java.util.Scanner;
 
