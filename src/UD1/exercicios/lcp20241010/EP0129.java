@@ -11,7 +11,7 @@ public class EP0129 {
         sc.close();
 
         resto = nIntroducido % 7;
-        cSumar = nIntroducido / 7 == 0 ? 0 : 7 - resto ;
+        cSumar = resto == 0 ? 0 : 7 - resto;
         multiplo = cSumar + nIntroducido;
 
         System.out.println("El número a sumar es " + cSumar + " -> (" + cSumar + " + " + nIntroducido + " = " + multiplo + ")");
