@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src/UD1/exercicios/EP0116.java
 package ud1.exercicios;
+=======
+package ud1.exercicios.LCP20241004;
+>>>>>>> 3c0887b297772a768dc28d3efd8706eae17f020b:src/UD1/exercicios/LCP20241004/EP0116.java
 
 import java.util.Scanner;
 
