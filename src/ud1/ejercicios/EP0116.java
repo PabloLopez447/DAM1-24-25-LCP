@@ -1,6 +1,5 @@
 package ud1.ejercicios;
 
-
 import java.util.Scanner;
 
 /**
@@ -9,29 +8,25 @@ import java.util.Scanner;
  * La segunda, medida en centímetros.
  * La última, medida en metros.
  * 
- * Diseña un programa que muestre la suma de las tres longitudes introducidas
- * (medida en centimetros).
-*/
+ * Diseña un programa que muestre la suma de las tres longitudes introducidas (medida en
+ * centimetros).
+ */
 
 public class EP0116 {
     public static void main(String[] args) {
-        double d1, d2, d3;
+        double dMetros, dCentimetros, dMilimetros, cmTotales;
         Scanner sc = new Scanner (System.in);
 
-        System.out.println("Hola, vamos a sumar 3 distancias");
-        System.out.print("Por favor escribe la primera discania en mm: ");
-        d1 = sc.nextDouble();
-        System.out.print("Bien, ahora escribe la segunda en cm: ");
-        d2 = sc.nextDouble();
-        System.out.print("Por último escribe la tercera en m: ");
-        d3 = sc.nextDouble();
-
-        double d1cm = d1 / 10;
-        double d3cm = d3 * 100;
-        double dTotal = d1cm + d2 + d3cm; 
-
-        System.out.println("Las 3 distancias sumadas en cm dan un total de " + dTotal + "cm");
+        System.out.print("Introduce el nº de metros: ");
+        dMetros = sc.nextDouble();
+        System.out.print("Introduce el nº de centimetros: ");
+        dCentimetros = sc.nextDouble();
+        System.out.print("Introduce el nº de milimetros: ");
+        dMilimetros = sc.nextDouble();
         sc.close();
 
+        cmTotales = dCentimetros + (dMetros * 100) + (dMilimetros / 10);
+
+        System.out.println("El total de cm es: " + cmTotales);
     }
 }

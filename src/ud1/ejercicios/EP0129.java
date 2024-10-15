@@ -2,6 +2,15 @@ package ud1.ejercicios;
 
 import java.util.Scanner;
 
+/**
+ * Escribe un programa que tome como entrada un número entero e indique qué cantidad hay que sumarle para que el resultado sea múltiplo de 7. Un ejemplo:
+ * A 2 hay que sumarle 5 para que el resultado (2+5=7) sea múltiplo de 7.
+ * A 13 hay que sumarle 1 para que el resultado (13+1=14) sea múltiplo de 7.
+ * A 14 no hay que sumarle nada (0) para que sea múltiplo de 7
+ *  
+ * Pista: El operador módulo puede ser muy útil para solucionar esta actividad.
+ */
+
 public class EP0129 {
     public static void main(String[] args) {
         int nIntroducido, cSumar, resto, multiplo;

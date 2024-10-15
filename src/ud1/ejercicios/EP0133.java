@@ -2,6 +2,15 @@ package ud1.ejercicios;
 
 import java.util.Scanner;
 
+/**
+ * Desarrolla un programa en Java que convierta unidades de almacenamiento entre bytes, kilobytes (KB), megabytes (MB) y gigabytes (GB). Solicita al usuario la cantidad de datos y la unidad de origen y destino.
+ * 
+ * 1 KB = 1024 bytes
+ * 1 MB = 1024 KB
+ * 1 GB = 1024 MB
+ * El programa deberá realizar la conversión correspondiente y mostrar el resultado.
+ */
+
 public class EP0133 {
     public static void main(String[] args) {
         // Datos

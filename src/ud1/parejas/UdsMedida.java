@@ -1,5 +1,5 @@
 // Eloy Eidon Loira (piloto) y Saul Fernandez Salgado (copiloto)
-package ud1.ejercicios.parejas;
+package ud1.parejas;
 
 import java.util.Scanner;
 
