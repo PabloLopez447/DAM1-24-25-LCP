@@ -23,7 +23,7 @@ import java.util.Scanner;
 public class AreaPerimetroVueltas {
     public static void main(String[] args) {
         double largo, ancho, radio, baseRec, aCirc, aRec, aTot, pCirc, pTot, nVueltas, mRest, aprox;
-        final double mMaraton = 21.097;
+        final double MMARATON = 21097;
         Scanner sc = new Scanner(System.in);
         System.out.print("Introduce el largo del terreno: ");
         largo = sc.nextDouble();
@@ -32,7 +32,7 @@ public class AreaPerimetroVueltas {
         sc.close();
 
         radio = ancho / 2;
-        baseRec = largo - radio;
+        baseRec = largo - ancho;
         aRec = ancho * baseRec;
         aCirc = Math.PI * Math.pow(radio, 2);
         aTot = aRec + aCirc;
@@ -40,13 +40,13 @@ public class AreaPerimetroVueltas {
         pCirc = 2 * Math.PI * radio;
         pTot = pCirc + (2 * baseRec);
 
-        nVueltas = (int) pTot / mMaraton;
-        mRest = pTot % mMaraton;
+        nVueltas = pTot / MMARATON;
+        mRest = pTot % MMARATON;
         aprox =  Math.round(mRest * 100) / 100;
 
-        System.out.printf("El área del terreno es de %.2f metros", aTot);
-        System.out.printf(" y el perímetro del terreno es de %.2f metros", pTot);
-        System.out.println("Se podran dar " + nVueltas + " y sobraran " + aprox);
+        System.out.printf("El área del terreno es de %.2f metros cuadrados", aTot);
+        System.out.printf(" y el perímetro del terreno es de %.2f metros.", pTot);
+        System.out.println(" Se podran dar " + nVueltas + " vueltas y sobraran " + aprox + " metros");
 
     }
 }
