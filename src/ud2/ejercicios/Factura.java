@@ -30,8 +30,7 @@ public class Factura {
 
         if (precioTot > 100) {
             precioFinal = precioTot - dinDescuento;
-        }
-        else {
+        } else {
             precioFinal = precioTot;
         }
 
