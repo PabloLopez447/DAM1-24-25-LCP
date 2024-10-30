@@ -8,15 +8,41 @@ import java.util.*;
 
 public class E0207 {
     public static void main(String[] args) {
-        int num1, num2, num3;
-        Scanner sc = new Scanner(System.in);
+        // Declaración de variables y constantes
+        int a, b, c;
 
-        System.out.println("Introduce los numeros a comparar: ");
-        num1 = sc.nextInt();
-        num2 = sc.nextInt();
-        num3 = sc.nextInt();
+        // Entrada de datos
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce tres números:");
+        a = sc.nextInt();
+        b = sc.nextInt();
+        c = sc.nextInt();
         sc.close();
 
-        
+        System.out.print("Números ordenados de mayor a menor: ");
+
+        // SOLUCIÓN CON IFS ANIDADOS
+        if (a > b) {
+            if (a > c) {
+                if (b > c) {
+                    System.out.println(a + " " + b + " " + c);
+                } else {
+                    System.out.println(a + " " + c + " " + b);
+                }
+            } else {
+                System.out.println(c + " " + a + " " + b);
+            }
+        } else {
+            if (b > c) {
+                if (a > c) {
+                    System.out.println(b + " " + a + " " + c);
+                } else {
+                    System.out.println(b + " " + c + " " + a);
+                }
+            } else {
+                System.out.println(c + " " + b + " " + a);
+            }
+        }
     }
+
 }
