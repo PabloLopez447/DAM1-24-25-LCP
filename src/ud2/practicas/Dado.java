@@ -36,11 +36,20 @@ public class Dado {
                     break;
             }
         }
-        System.out.println("Han salido " + num1s + " unos");
-        System.out.println("Han salido " + num2s + " doses");
-        System.out.println("Han salido " + num3s + " treses");
-        System.out.println("Han salido " + num4s + " cuatros");
-        System.out.println("Han salido " + num5s + " cincos");
-        System.out.println("Han salido " + num6s + " seises");
+        porc1s = (num1s * 100) / NUM_LANZAMIENTOS;
+        porc2s = (num2s * 100) / NUM_LANZAMIENTOS;
+        porc3s = (num3s * 100) / NUM_LANZAMIENTOS;
+        porc4s = (num4s * 100) / NUM_LANZAMIENTOS;
+        porc5s = (num5s * 100) / NUM_LANZAMIENTOS;
+        porc6s = (num6s * 100) / NUM_LANZAMIENTOS;
+
+
+
+        System.out.println("Han salido " + num1s + " unos" + "(" + porc1s + "%)");
+        System.out.println("Han salido " + num2s + " doses" + "(" + porc2s + "%)");
+        System.out.println("Han salido " + num3s + " treses" + "(" + porc3s + "%)");
+        System.out.println("Han salido " + num4s + " cuatros" + "(" + porc4s + "%)");
+        System.out.println("Han salido " + num5s + " cincos" + "(" + porc5s + "%)");
+        System.out.println("Han salido " + num6s + " seises" + "(" + porc6s + "%)");
     }
 }
