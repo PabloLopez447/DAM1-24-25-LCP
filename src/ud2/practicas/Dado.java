@@ -2,16 +2,14 @@ package ud2.practicas;
 
 public class Dado {
     public static void main(String[] args) {
-        final int NUM_LANZAMIENTOS = 100;
-        int MAX = 6;
-        int MIN = 1;
+        final double NUM_LANZAMIENTOS = 10;
         int num1s = 0, num2s = 0, num3s = 0, num4s = 0, num5s = 0, num6s = 0;
-        int porc1s, porc2s, porc3s, porc4s, porc5s, porc6s;
+        double porc1s, porc2s, porc3s, porc4s, porc5s, porc6s;
 
         System.out.println("Lanzando un dado " + NUM_LANZAMIENTOS + " veces");
 
-        for (int i = 0; i <= NUM_LANZAMIENTOS; i++) {
-            int cara = (int) (Math.random() * (MAX - MIN + 1)) + MIN;
+        for (int i = 0; i < NUM_LANZAMIENTOS; i++) {
+            int cara = (int) (Math.random() * (6 - 1 + 1)) + 1;
 
             switch (cara) {
                 case 1:
@@ -36,14 +34,13 @@ public class Dado {
                     break;
             }
         }
+
         porc1s = (num1s * 100) / NUM_LANZAMIENTOS;
         porc2s = (num2s * 100) / NUM_LANZAMIENTOS;
         porc3s = (num3s * 100) / NUM_LANZAMIENTOS;
         porc4s = (num4s * 100) / NUM_LANZAMIENTOS;
         porc5s = (num5s * 100) / NUM_LANZAMIENTOS;
         porc6s = (num6s * 100) / NUM_LANZAMIENTOS;
-
-
 
         System.out.println("Han salido " + num1s + " unos" + "(" + porc1s + "%)");
         System.out.println("Han salido " + num2s + " doses" + "(" + porc2s + "%)");
