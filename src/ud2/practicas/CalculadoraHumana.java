@@ -37,5 +37,6 @@ public class CalculadoraHumana {
     public static void main(String[] args) {
         final int MAX = 200;
         int operando1 = (int) (Math.random() * (MAX - 1 + 1)) + 1;
+        System.out.println(operando1);
     }
 }
