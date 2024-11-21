@@ -1,6 +1,10 @@
 package ud2.lcpexamen;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.*;
+
+import org.junit.Test;
 
 //Pablo López Couso
 
@@ -24,19 +28,36 @@ public class DuracionBombilla {
         String causa = "";
 
         if (horasEncendido * nEncendidos > nHoras) {
-            causa = "Horas";
+            causa = "HORAS";
         }
         if (horasEncendido * nEncendidos < nHoras) {
-            causa = "Encendidos";
+            causa = "ENCENDIDOS";
         }
         if (horasEncendido * nEncendidos == nHoras) {
-            causa = "Horas + Encendidos";
+            causa = "ENCENDIDOS + HORAS";
         }
-        if (horasEncendido > 10 || horasEncendido <= 0 || nEncendidos < 0) {
-            causa = "Error";
+        if (horasEncendido > 10 || horasEncendido <= 0 || nEncendidos < 0 || nHoras <= 0) {
+            causa = "ERROR";
         }
 
         return causa;
 
     }
+
+    @Test
+    public void causaFinBombillaTest() {
+        assertEquals("ERROR", causaFinBombilla(100, 100, 100));
+        assertEquals("ERROR", causaFinBombilla(1000, -10, 10));
+        assertEquals("ERROR", causaFinBombilla(0, 10, 10));
+        assertEquals("ERROR", causaFinBombilla(1000, 10, 0));
+        assertEquals("ENCENDIDOS", causaFinBombilla(500, 400, 1));
+        assertEquals("HORAS", causaFinBombilla(1000, 10000, 1));
+        assertEquals("HORAS", causaFinBombilla(1000, 200, 10));
+        assertEquals("HORAS", causaFinBombilla(2000, 700, 3));
+        assertEquals("ENCENDIDOS", causaFinBombilla(2000, 600, 3));
+        assertEquals("ENCENDIDOS", causaFinBombilla(1000, 100, 1));
+        assertEquals("ENCENDIDOS", causaFinBombilla(1000, 100, 9));
+        assertEquals("ENCENDIDOS + HORAS", causaFinBombilla(1000, 100, 10));
+    }
+
 }
