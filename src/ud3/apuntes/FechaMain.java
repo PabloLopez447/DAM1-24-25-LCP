@@ -20,6 +20,7 @@ public class FechaMain {
         } else {
             System.out.println("Fecha no valida");
         }
+        sc.close();
     }
 }    
 

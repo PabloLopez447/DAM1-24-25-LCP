@@ -7,7 +7,6 @@ public class Persona {
     private String apellido2;
     private int edad;
     private double estatura = 1.80;
-    private final String dni = null;
 
     public static int contadorPersonas;
     

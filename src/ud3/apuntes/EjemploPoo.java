@@ -46,7 +46,7 @@ public class EjemploPoo {
       System.out.println(Persona.contadorPersonas);
 
 
-      Persona p4 = new Persona("Claudia", 8, 1.2);
+      // Persona p4 = new Persona("Claudia", 8, 1.2);
 
       System.out.println("FIN");
    }
