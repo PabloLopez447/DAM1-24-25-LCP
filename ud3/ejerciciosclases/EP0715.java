@@ -15,7 +15,11 @@ public class EP0715 {
         fecha.incrementarAño(1);
         fecha.mostrar();
 
-
+        try {
+            Calendario fecha4 = new Calendario(0, -1, 1);            
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
         System.out.println("FIN");
     }
