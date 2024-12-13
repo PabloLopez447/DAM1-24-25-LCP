@@ -1,6 +1,4 @@
-package ud3.ejercicios;
-
-import org.junit.Test;
+package ud3.apuntes;
 
 public class E0708 {
     public static void main(String[] args) {
@@ -16,14 +14,14 @@ public class E0708 {
         miRadio.sintonizarMemoria1();
         miRadio.display();
 
-        Sintonizador miRadioError = new Sintonizador(200);
-        
+        Sintonizador miRadioError = null;
+        try {
+            miRadioError = new Sintonizador(20);    
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
-    }
-
-    @Test
-    public void testSintonizador() {
-        //assertEquals(0, 0);
+        System.out.println(miRadioError);
     }
 
 }

@@ -5,52 +5,53 @@ import java.util.Scanner;
 public class Radar {
 
     public static void main(String[] args) {
-        final double DISTANCIA = 10;
-        final int LIMITE = 120;
+        final double DISTANCIA_KM = 10;
+        final int VELOCIDAD_MAXIMA = 120;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Introduce los segundos que tardo en recorrer la distancia");
-        int tiempo = sc.nextInt();
+        System.out.println("Introduce los segundos que tardó en recorrer la distancia:");
+        int tiempoSegundos = sc.nextInt();
         sc.close();
-        int multa = multaInfraccion(LIMITE, excesoVelocidad(DISTANCIA, tiempo, LIMITE));
-        if (multa == 0){
-            System.out.println("Velocidade dentro do límite");
-        }else{
-            System.out.println("Infracción por exceso de velocidade!! Multa de " + multa + " euros!!");
+
+        int multaAplicada = calcularMulta(VELOCIDAD_MAXIMA,
+                calcularExcesoVelocidad(DISTANCIA_KM, tiempoSegundos, VELOCIDAD_MAXIMA));
+        if (multaAplicada == 0) {
+            System.out.println("Velocidad dentro del límite.");
+        } else {
+            System.out.println("¡Infracción por exceso de velocidad! Multa de " + multaAplicada + " euros.");
         }
     }
 
-    public static int excesoVelocidad(double distancia, int tiempo, int limite) {
-        int exceso = 0;
-        if ((distancia / (tiempo / 3600.0) > limite)) {
-            exceso = (int) ((distancia / (tiempo / 3600.0)) - limite);
+    public static int calcularExcesoVelocidad(double distanciaKm, int tiempoSegundos, int velocidadLimite) {
+        int excesoVelocidad = 0;
+        double velocidad = distanciaKm / (tiempoSegundos / 3600.0);
+        if (velocidad > velocidadLimite) {
+            excesoVelocidad = (int) (velocidad - velocidadLimite);
         }
-        return exceso;
+        return excesoVelocidad;
     }
 
-    public static int multaInfraccion(int limite, int excesoVelocidade) {
+    public static int calcularMulta(int velocidadLimite, int excesoVelocidad) {
         int multa = 0;
-        if (limite <= 50 && excesoVelocidade > 0) {
-            if (excesoVelocidade <= 20 ) {
+        if (velocidadLimite <= 50 && excesoVelocidad > 0) {
+            if (excesoVelocidad <= 20) {
                 multa = 100;
-            } else if (excesoVelocidade > 20 && excesoVelocidade <= 30) {
+            } else if (excesoVelocidad <= 30) {
                 multa = 300;
-            } else if (excesoVelocidade > 30 && excesoVelocidade <= 40) {
+            } else if (excesoVelocidad <= 40) {
                 multa = 400;
-            } else if (excesoVelocidade > 40 && excesoVelocidade <= 50) {
+            } else if (excesoVelocidad <= 50) {
                 multa = 500;
             } else {
                 multa = 600;
             }
-        }
-
-        if (limite >= 60 && excesoVelocidade > 0) {
-            if (excesoVelocidade <= 30) {
+        } else if (velocidadLimite >= 60 && excesoVelocidad > 0) {
+            if (excesoVelocidad <= 30) {
                 multa = 100;
-            } else if (excesoVelocidade > 30 && excesoVelocidade <= 50) {
+            } else if (excesoVelocidad <= 50) {
                 multa = 300;
-            } else if (excesoVelocidade > 50 && excesoVelocidade <= 60) {
+            } else if (excesoVelocidad <= 60) {
                 multa = 400;
-            } else if (excesoVelocidade > 60 && excesoVelocidade <= 70) {
+            } else if (excesoVelocidad <= 70) {
                 multa = 500;
             } else {
                 multa = 600;
@@ -58,5 +59,4 @@ public class Radar {
         }
         return multa;
     }
-    
 }

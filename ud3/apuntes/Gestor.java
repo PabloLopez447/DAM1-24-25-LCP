@@ -1,4 +1,4 @@
-package ud3.ejercicios;
+package ud3.apuntes;
 
 public class Gestor {
     public String nombre;
