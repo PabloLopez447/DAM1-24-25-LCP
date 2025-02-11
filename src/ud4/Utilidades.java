@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -29,19 +30,37 @@ public class Utilidades {
     // -1
     public static int[] rellenarArray() {
         System.out.println("Introduce números (-1 para terminar):");
-        int[] temp = new int[100]; // Capacidad máxima temporal
+        int[] array = new int[0];
         int count = 0;
 
         while (true) {
             int num = scanner.nextInt();
             if (num == -1)
                 break;
-            temp[count++] = num;
+            array = Arrays.copyOf(array, count + 1);
+            array[count++] = num;
         }
+        return array;
+    }
 
-        int[] resultado = new int[count];
-        System.arraycopy(temp, 0, resultado, 0, count);
-        return resultado;
+    // Suma los elementos de un array
+    public static int sumar(int[] t) {
+        int suma = 0;
+        for (int i : t) {
+            suma += i;
+        }
+        return suma;
+    }
+
+    // Encuentra el máximo valor en un array
+    public static int maximo(int t[]) {
+        if (t == null || t.length == 0)
+            return 0;
+        int maximo = t[0];
+        for (int i = 1; i < t.length; i++)
+            if (t[i] > maximo)
+                maximo = t[i];
+        return maximo;
     }
 
     // Rellenar una matriz con valores introducidos por el usuario
@@ -91,6 +110,24 @@ public class Utilidades {
             matriz[fila1][col1] = matriz[fila2][col2];
             matriz[fila2][col2] = temp;
         }
+    }
+
+    // Encuentra la columna con la mayor suma en una matriz
+    public static int[] columnaMayorSuma(int[][] t) {
+        int mayor = 0;
+        int aux = 0;
+        int valori = 0;
+        for (int i = 0; i < t.length; i++) {
+            for (int j = 0; j < t[i].length; j++) {
+                aux += t[i][j];
+            }
+            if (aux > mayor) {
+                mayor = aux;
+                valori = i;
+            }
+            aux = 0;
+        }
+        return t[valori];
     }
 
     // Recorrer una matriz por filas
@@ -163,6 +200,28 @@ public class Utilidades {
             }
         }
         return true;
+    }
+
+    public static void ejemplosCharacter() {
+        char ch = 'A';
+        char num = '5';
+        char space = ' ';
+
+        System.out.println("isDigit('5'): " + Character.isDigit(num)); // Devuelve true porque '5' es un número
+        System.out.println("isLetter('A'): " + Character.isLetter(ch)); // Devuelve true porque 'A' es una letra
+        System.out.println("isLetterOrDigit('A'): " + Character.isLetterOrDigit(ch)); // Devuelve true porque 'A' es una
+                                                                                      // letra
+        System.out.println("isLetterOrDigit('5'): " + Character.isLetterOrDigit(num)); // Devuelve true porque '5' es un
+                                                                                       // número
+        System.out.println("isLowerCase('a'): " + Character.isLowerCase('a')); // Devuelve true porque 'a' está en
+                                                                               // minúscula
+        System.out.println("isUpperCase('A'): " + Character.isUpperCase(ch)); // Devuelve true porque 'A' está en
+                                                                              // mayúscula
+        System.out.println("isSpaceChar(' '): " + Character.isSpaceChar(space)); // Devuelve true porque es un espacio
+        System.out.println("isWhitespace('\t'): " + Character.isWhitespace('\t')); // Devuelve true porque '\t' es un
+                                                                                   // espacio en blanco
+        System.out.println("toLowerCase('A'): " + Character.toLowerCase(ch)); // Convierte 'A' a 'a'
+        System.out.println("toUpperCase('a'): " + Character.toUpperCase('a')); // Convierte 'a' a 'A'
     }
 
     public static void main(String[] args) {
