@@ -1,17 +1,3 @@
-<<<<<<< HEAD:src/ud3/ejercicios/E0709.java
-package ud3.ejercicios;
-
-public class E0709 {
-
-    public static void main(String[] args) {
-        Bombilla b1 = new Bombilla(false);
-        Bombilla b2 = new Bombilla(false);
-        Bombilla b3 = new Bombilla(false);
-
-        
-    }
-
-=======
 package ud3.apuntes;
 
 public class E0709 {
@@ -36,5 +22,4 @@ public class E0709 {
         Bombilla.apagarInterruptorGeneral();
         System.out.println(b1.estado() + " - " + b2.estado() + " - " + b3.estado());            
     }
->>>>>>> 53e0324b6607121d6bf49b7f0c91040748bf98bf:ud3/apuntes/E0709.java
 }

@@ -1,3 +1,5 @@
+package ud4;
+
 public class StringFunctionsExample {
     public static void main(String[] args) {
 

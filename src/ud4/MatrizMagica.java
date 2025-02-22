@@ -1,3 +1,5 @@
+package ud4;
+
 import java.util.Scanner;
 
 public class MatrizMagica {
