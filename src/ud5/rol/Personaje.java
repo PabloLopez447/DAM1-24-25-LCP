@@ -201,7 +201,7 @@ public class Personaje {
             if (experiencia > (nivel * 1000)) {
                 subirNivel();
                 nNiveles++;
-                this.experiencia -= (this.nivel * 1000);
+                this.experiencia -= ((this.nivel -1) * 1000);
             }
         } while (experiencia > (nivel * 1000));
         return nNiveles;
