@@ -20,7 +20,7 @@ public class Personaje {
     private int puntosVida;
 
     public Personaje(String nombre, Raza raza, int fuerza, int agilidad, int constitucion, int inteligencia,
-            int intuicion, int presencia, int nivel, int experiencia, int puntosVida) {
+            int intuicion, int presencia, int nivel, int experiencia) {
         if (fuerza < 1 || agilidad < 1 || constitucion < 1 || inteligencia < 1 || intuicion < 1 || presencia < 1) {
             throw new IllegalArgumentException("Las características físicas deben ser mayores o iguales a 1");
         }
