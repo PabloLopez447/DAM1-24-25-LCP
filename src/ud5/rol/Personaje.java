@@ -83,20 +83,6 @@ public class Personaje {
         this.puntosVida = 50 + constitucion;
     }
 
-    public void mostrar() {
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Raza: " + raza);
-        System.out.println("Fuerza: " + fuerza);
-        System.out.println("Agilidad: " + agilidad);
-        System.out.println("Constitución: " + constitucion);
-        System.out.println("Inteligencia: " + inteligencia);
-        System.out.println("Intuición: " + intuicion);
-        System.out.println("Presencia: " + presencia);
-        System.out.println("Nivel: " + nivel);
-        System.out.println("Experiencia: " + experiencia);
-        System.out.println("Puntos de vida: " + puntosVida + "/" + (50 + constitucion));
-    }
-
     public String getNombre() {
         return nombre;
     }
@@ -194,6 +180,20 @@ public class Personaje {
         return new Random().nextInt(100) + 1;
     }
 
+    public void mostrar() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Raza: " + raza);
+        System.out.println("Fuerza: " + fuerza);
+        System.out.println("Agilidad: " + agilidad);
+        System.out.println("Constitución: " + constitucion);
+        System.out.println("Inteligencia: " + inteligencia);
+        System.out.println("Intuición: " + intuicion);
+        System.out.println("Presencia: " + presencia);
+        System.out.println("Nivel: " + nivel);
+        System.out.println("Experiencia: " + experiencia);
+        System.out.println("Puntos de vida: " + puntosVida + "/" + (50 + constitucion));
+    }
+
     byte sumarExperiencia(int puntos) {
         byte nNiveles = 0;
         this.experiencia += puntos;
@@ -201,7 +201,7 @@ public class Personaje {
             if (experiencia > (nivel * 1000)) {
                 subirNivel();
                 nNiveles++;
-                this.experiencia -= ((this.nivel -1) * 1000);
+                this.experiencia -= ((this.nivel - 1) * 1000);
             }
         } while (experiencia > (nivel * 1000));
         return nNiveles;
@@ -254,6 +254,23 @@ public class Personaje {
             enemigo.perderVida(dmg);
             sumarExperiencia(puntos);
             enemigo.sumarExperiencia(puntos);
+        }
+        return dmg;
+    }
+
+    int atacar(Monstruo enemigo) {
+        int dmg = 0;
+        int atq = generarValor() + this.fuerza;
+        int def = generarValor() + enemigo.getDefensa();
+        int puntos = atq - def;
+
+        if (puntos > 0) {
+            dmg = puntos;
+            if (puntos > enemigo.getPuntosVida()) {
+                dmg = enemigo.getPuntosVida();
+            }
+            enemigo.perderVida(dmg);
+            sumarExperiencia(puntos);
         }
         return dmg;
     }
