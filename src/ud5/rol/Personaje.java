@@ -176,6 +176,43 @@ public class Personaje {
         return nombre + " (" + puntosVida + "/" + (50 + constitucion) + ")";
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Personaje other = (Personaje) obj;
+        if (nombre == null) {
+            if (other.nombre != null)
+                return false;
+        } else if (!nombre.equals(other.nombre))
+            return false;
+        if (raza != other.raza)
+            return false;
+        if (fuerza != other.fuerza)
+            return false;
+        if (agilidad != other.agilidad)
+            return false;
+        if (constitucion != other.constitucion)
+            return false;
+        if (inteligencia != other.inteligencia)
+            return false;
+        if (intuicion != other.intuicion)
+            return false;
+        if (presencia != other.presencia)
+            return false;
+        if (nivel != other.nivel)
+            return false;
+        if (experiencia != other.experiencia)
+            return false;
+        if (puntosVida != other.puntosVida)
+            return false;
+        return true;
+    }
+
     private static int generarValor() {
         return new Random().nextInt(100) + 1;
     }
