@@ -3,13 +3,17 @@ package ud5.rol;
 import java.util.Arrays;
 
 public class PersonajeEx extends Personaje {
-    int dinero = 0;
+    int dinero;
     Item[] inventario;
-    int cargaMax = 50 + 2 * this.getConstitucion();
+    int cargaMax;
 
-    public PersonajeEx(String nombre) {
-        super(nombre);
+    public PersonajeEx(String nombre, Raza raza, int dinero, Item[] inventario, int cargaMax) {
+        super(nombre, raza);
+        this.dinero = 0;
+        this.inventario = new Item[0];
+        this.cargaMax = 50 + 2 * this.getConstitucion();
     }
+    
 
     boolean addToInventario(Item item) {
         int cargaActual = 0;
