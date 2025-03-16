@@ -1,4 +1,4 @@
-package praiasdegalicia;
+package ud5.praiasdegalicia;
 
 public class AppBanderaAzul {
     public static void main(String[] args) {

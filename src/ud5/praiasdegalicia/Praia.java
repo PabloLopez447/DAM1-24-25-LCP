@@ -1,4 +1,4 @@
-package praiasdegalicia;
+package ud5.praiasdegalicia;
 
 
 public class Praia implements Comparable{
@@ -83,12 +83,6 @@ public class Praia implements Comparable{
     @Override
     public String toString() {
         return id + " - " + nome + " - " + concello + " - " + provincia + " - (" + lat + ", " + lon + ")";
-    }
-
-    @Override
-    public int compareTo(Object o) {
-        int res = id.compareTo(((Praia)o).id);
-        return res;
     }
 
 }

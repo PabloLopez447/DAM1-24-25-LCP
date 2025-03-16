@@ -1,4 +1,4 @@
-package praiasdegalicia;
+package ud5.praiasdegalicia;
 
 import java.util.Arrays;
 
