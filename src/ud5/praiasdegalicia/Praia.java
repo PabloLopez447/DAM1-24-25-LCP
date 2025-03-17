@@ -1,7 +1,9 @@
 package ud5.praiasdegalicia;
 
+import java.util.Arrays;
+import java.util.Comparator;
 
-public class Praia implements Comparable{
+public class Praia implements Comparable<Praia> {
     private int id;
     private String nome;
     private String concello;
@@ -85,4 +87,32 @@ public class Praia implements Comparable{
         return id + " - " + nome + " - " + concello + " - " + provincia + " - (" + lat + ", " + lon + ")";
     }
 
+    @Override
+    public int compareTo(Praia outra) {
+        return Integer.compare(this.id, outra.id);
+    }
+
+    public void mostrarDetalles() {
+        System.out.println(id + " - " + nome + " - " + concello + " - " + provincia + " - (" + lat + ", " + lon + ")");
+    }
+
+    public static void imprimirLista(Praia[] praias, int limite) {
+        for (int i = 0; i < Math.min(limite, praias.length); i++) {
+            System.out.println(praias[i]);
+        }
+    }
+
+    public static Praia[] sortLatitudNorteSur(Praia[] p) {
+        Praia[] copia = Arrays.copyOf(p, p.length);
+        Arrays.sort(copia, Comparator.comparingDouble(Praia::getLat).reversed());
+        return copia;
+    }
+
+    public static Praia[] sortProvinciaConcelloNome(Praia[] p) {
+        Praia[] copia = Arrays.copyOf(p, p.length);
+        Arrays.sort(copia, Comparator.comparing(Praia::getProvincia)
+                .thenComparing(Praia::getConcello)
+                .thenComparing(Praia::getNome));
+        return copia;
+    }
 }
