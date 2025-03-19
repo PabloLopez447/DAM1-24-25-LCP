@@ -1,6 +1,7 @@
 package ud5.examentest;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Examen {
     String titulo;
@@ -11,6 +12,10 @@ public class Examen {
     }
 
     void addPregunta(Pregunta p) {
+        if (Arrays.binarySearch(preguntas, p, Comparator.comparing(Pregunta::toString)) >= 0) {
+            System.out.println("La pregunta ya está en el examen.");
+            return;
+        }
         preguntas = Arrays.copyOf(preguntas, preguntas.length + 1);
         preguntas[preguntas.length - 1] = p;
     }
