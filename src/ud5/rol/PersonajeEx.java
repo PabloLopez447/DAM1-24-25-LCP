@@ -7,7 +7,7 @@ public class PersonajeEx extends Personaje {
     Item[] inventario;
     int cargaMax;
 
-    public PersonajeEx(String nombre, Raza raza, int dinero, Item[] inventario, int cargaMax) {
+    public PersonajeEx(String nombre, Raza raza, int dinero) {
         super(nombre, raza);
         this.dinero = 0;
         this.inventario = new Item[0];

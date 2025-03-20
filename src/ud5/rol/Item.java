@@ -56,4 +56,9 @@ public class Item {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return nombre + ", peso: " + peso + " kilos, precio: " + precio + " monedas";
+    }
+
 }
