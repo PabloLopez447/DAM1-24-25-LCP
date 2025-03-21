@@ -1,6 +1,6 @@
 package ud5.apuntesherencia;
 
-public class Persona {
+public class Persona implements Comparable<Persona>{
     // Datos
     String nombre;
     String apellido1;
@@ -138,6 +138,11 @@ public class Persona {
     void saludar() {
         System.out.println("Hola. Mi nombre es " + nombre);
         System.out.println("Encantado de conocerte.");
+    }
+
+    @Override
+    public int compareTo(Persona o) {
+        return dni.compareTo(o.dni);
     }
 
 }
