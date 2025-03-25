@@ -14,9 +14,10 @@ public class App1Inventario {
 
         System.out.println("1. Inventario de personaje");
         System.out.println("======================================");
+        mostrarInventario(p);
     }
 
-    public void mostrarInventario(PersonajeEx p) {
+    public static void mostrarInventario(PersonajeEx p) {
         System.out.println("Invenrario de " + p.getNombre());
         for (int i = 0; i < p.inventario.length; i++) {
             System.out.println(p.inventario[i]);
