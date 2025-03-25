@@ -38,16 +38,18 @@ public class E1201_MetodosGenericos {
 
     public static <U> U[] add(U e, U[] t) {
         U[] t2 = Arrays.copyOf(t, t.length + 1);
-        t2[t.length - 1] = e;
+        t2[t.length] = e;
         return t2;
     }
 
     public static <U> boolean buscar(U e, U[] t) {
-        if (Arrays.binarySearch(t, e) < 0) {
-            return true;
-        } else {
-            return false;
+        boolean result = false;
+        for (int i = 0; i < t.length; i++) {
+            if (e.equals(t[i])) {
+                result = true;
+            }
         }
+        return result;
     }
 
     public static <U> U[] concatenar(U[] t1, U[] t2) {
