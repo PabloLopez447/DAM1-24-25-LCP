@@ -102,7 +102,6 @@ public class CocheCarrerasTestDouble {
     public void testAvanzarExceedsAutonomia() {
         coche = new CocheCarreras("TestCar", 50, 5, 10);
         double initialAutonomia = coche.getAutonomiaRestante();
-        // TODO Revisar.. La prueba puede fallar si no avanza lo suficiente
         double metros = coche.avanzar();
         assertTrue(metros <= initialAutonomia);
         assertEquals(0, coche.getAutonomiaRestante());
@@ -166,7 +165,6 @@ public class CocheCarrerasTestDouble {
 
     @Test
     public void testRepostarWithNoAutonomiaAndTurbos() {
-        // TODO Revisar utilidad.. 
         coche = new CocheCarreras("TestCar", 50, 0, 0);
         coche.repostar();
         assertEquals(coche.getTurbosRestantes(), 0);

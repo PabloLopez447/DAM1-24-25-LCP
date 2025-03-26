@@ -67,7 +67,6 @@ public class CocheCarreras {
         if (turbosRestantes > 0) {
             turbosRestantes--;
             metros = (int)(velocidadMaxima * 1.5);
-            // TODO -> Implementar un método privado para evitar repetir el siguiente código
             metros = Math.min(metros, autonomiaRestante);
             autonomiaRestante -= metros;
             distanciaRecorrida += metros;    
