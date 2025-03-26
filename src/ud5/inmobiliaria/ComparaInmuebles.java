@@ -2,6 +2,7 @@ package ud5.inmobiliaria;
 
 import java.util.Comparator;
 
+@SuppressWarnings("rawtypes")
 public class ComparaInmuebles implements Comparator {
     @Override
     public int compare(Object ob1, Object ob2) {

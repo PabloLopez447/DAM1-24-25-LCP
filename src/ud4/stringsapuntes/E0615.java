@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class E0615 {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         // Leer Palabra Original
         Scanner sc = new Scanner(System.in);

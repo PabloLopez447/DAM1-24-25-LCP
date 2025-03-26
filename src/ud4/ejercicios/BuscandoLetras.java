@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class BuscandoLetras {
 
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
 
         String conceptos[] = { "Algoritmo",

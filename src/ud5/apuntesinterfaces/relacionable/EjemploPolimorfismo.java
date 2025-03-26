@@ -3,11 +3,13 @@ package ud5.apuntesinterfaces.relacionable;
 import java.util.ArrayList;
 
 public class EjemploPolimorfismo {
+    @SuppressWarnings({ "unused", "rawtypes" })
     public static void main(String[] args) {
 
         Relacionable rr = new Linea(0.1, 0.2, 0.3, 0.4);
         rr = new Fraccion(5, 3);
 
+        @SuppressWarnings("unchecked")
         ArrayList<Relacionable> array = new ArrayList();
         array.add(new Linea(15, 3, 9, 5));
         array.add(new Fraccion(10, 7));

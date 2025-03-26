@@ -3,6 +3,7 @@ package ud5.inmobiliaria;
 import java.util.Arrays;
 
 public class Inmobiliaria {
+    @SuppressWarnings("unchecked")
     public static void main(String[] args) {
         // 1.1. Modelo de Clases
         // Crea un piso en una 5a planta, de 100m2, 3 habitaciones y 2 baños en la

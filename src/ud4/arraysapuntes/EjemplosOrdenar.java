@@ -1,7 +1,6 @@
 package ud4.arraysapuntes;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 import ud4.ArraysUtil;
@@ -111,6 +110,7 @@ public class EjemplosOrdenar {
             A[k++] = B[i++]; // primera mitad (si los hay)
     }
 
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         Integer[] t = ArraysUtil.arrayAleatorio(100, 1, 100);
 

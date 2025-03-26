@@ -25,6 +25,7 @@ public class MarcaPagina {
 
 
 
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         // Crea  marcapáginas
         MarcaPagina mp = new MarcaPagina();

@@ -2,6 +2,7 @@ package ud5.apuntesinterfaces;
 
 import java.util.Arrays;
 
+@SuppressWarnings("rawtypes")
 public class Socio implements Comparable {
     int id;
     String nombre;

@@ -3,6 +3,7 @@ package ud4.stringsapuntes;
 import java.util.Scanner;
 
 public class E0608 {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         final String PREFIJO = "Javalín, javalón";
         final String SUFIJO = "javalén, len, len";

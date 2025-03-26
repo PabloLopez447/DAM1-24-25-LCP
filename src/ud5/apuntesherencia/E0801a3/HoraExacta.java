@@ -1,6 +1,5 @@
 package ud5.apuntesherencia.E0801a3;
 
-import java.util.Objects;
 
 public class HoraExacta extends Hora {
     byte segundo;

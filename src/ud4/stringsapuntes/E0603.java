@@ -3,6 +3,7 @@ package ud4.stringsapuntes;
 import java.util.Scanner;
 
 public class E0603 {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         int MAX_INTENTOS = 3;
         int intentos = 0;

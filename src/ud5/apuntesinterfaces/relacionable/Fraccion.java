@@ -1,9 +1,8 @@
 package ud5.apuntesinterfaces.relacionable;
 
-import java.util.ArrayList;
+
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
+
 
 public class Fraccion implements Relacionable, Comparable<Fraccion> {
 

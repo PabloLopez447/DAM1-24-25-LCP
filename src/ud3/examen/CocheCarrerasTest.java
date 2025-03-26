@@ -28,6 +28,7 @@ public class CocheCarrerasTest {
     // La velocidad máxima debe estar entre 1 y 100. Aquí se prueban los límites con una excepción
     // Estas pruebas fallan si se han corregido valores inválidos al implementar el constructor
 
+    @SuppressWarnings("unused")
     @Test
     public void testConstructorInvalidVelocidadMaximaLow() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
@@ -37,6 +38,7 @@ public class CocheCarrerasTest {
         //assertEquals("La Velocidad Máxima debe estar entre 1 y 100", exception.getMessage());
     }
 
+    @SuppressWarnings("unused")
     @Test
     public void testConstructorInvalidVelocidadMaximaHigh() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {

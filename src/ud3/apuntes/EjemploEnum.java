@@ -5,6 +5,7 @@ import java.util.Scanner;
 import ud3.apuntes.Persona.Sexo;
 
 public class EjemploEnum {
+    @SuppressWarnings({ "resource", "unused" })
     public static void main(String[] args) {
         DiaDeLaSemana hoy;
 

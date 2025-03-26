@@ -101,6 +101,7 @@ public class Linea implements Relacionable, Modificable {
         return Relacionable.super.nombreClase();
     }
 
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     public static void main(String[] args) {
 
         Linea l1 = new Linea(2, 2, 4, 1);
@@ -113,6 +114,7 @@ public class Linea implements Relacionable, Modificable {
         }
 
         // Un ArrayList es una estructura dinámica "similar" a un array
+        
         ArrayList<Linea> lineas = new ArrayList();
 
         lineas.add(new Linea(0, 7, 1, 4));

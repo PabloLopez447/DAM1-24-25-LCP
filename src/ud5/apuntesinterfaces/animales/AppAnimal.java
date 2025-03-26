@@ -1,13 +1,14 @@
 package ud5.apuntesinterfaces.animales;
 
 public class AppAnimal {
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         Perro perro = new Perro();
         Gato gato = new Gato();
         Caracol caracol = new Caracol();
 
         System.out.println(Sonido.version);
-        System.out.println(perro.version);
+        System.out.println(Sonido.version);
 
         perro.voz();
         gato.voz();

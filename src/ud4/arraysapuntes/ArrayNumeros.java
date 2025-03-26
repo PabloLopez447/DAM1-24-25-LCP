@@ -3,6 +3,7 @@ package ud4.arraysapuntes;
 import java.util.Scanner;
 
 public class ArrayNumeros {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Introduce un número: ");

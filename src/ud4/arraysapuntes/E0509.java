@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class E0509 {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         final int NUM = 5;
         Scanner sc = new Scanner(System.in);

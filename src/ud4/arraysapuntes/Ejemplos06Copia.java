@@ -3,6 +3,7 @@ package ud4.arraysapuntes;
 import java.util.Arrays;
 
 public class Ejemplos06Copia {
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         int[] t1 = {5, 7, 2, 9, 3, 4};
 

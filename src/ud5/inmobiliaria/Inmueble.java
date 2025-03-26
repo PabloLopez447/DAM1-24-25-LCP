@@ -1,5 +1,6 @@
 package ud5.inmobiliaria;
 
+@SuppressWarnings("rawtypes")
 public abstract class Inmueble implements Comparable {
     String direccion;
     int m2;

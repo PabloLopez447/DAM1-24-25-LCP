@@ -3,6 +3,7 @@ package ud4.stringsapuntes;
 import java.util.Scanner;
 
 public class E0611 {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         String conjunto1 = "eikmpqrstuv";
         String conjunto2 = "pviumterkqs";

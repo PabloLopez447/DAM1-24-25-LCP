@@ -3,6 +3,7 @@ package ud4.stringsapuntes;
 import java.util.Scanner;
 
 public class E0609 {
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String frase = "";
