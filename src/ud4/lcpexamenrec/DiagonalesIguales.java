@@ -18,6 +18,9 @@ public class DiagonalesIguales {
         if (t.length != t[0].length) {
             return false;
         }
+        if (t.length <= 0) {
+            return false;
+        }
 
         int suma1 = 0;
         int suma2 = 0;
