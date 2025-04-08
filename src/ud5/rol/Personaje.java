@@ -2,10 +2,6 @@ package ud5.rol;
 
 import java.util.Random;
 
-enum Raza {
-    HUMANO, ELFO, ENANO, HOBBIT, ORCO, TROLL
-}
-
 public class Personaje {
     private String nombre;
     private Raza raza;
