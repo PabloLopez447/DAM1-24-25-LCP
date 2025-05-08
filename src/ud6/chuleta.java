@@ -10,6 +10,7 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class chuleta {
+    @SuppressWarnings({ "unused", "unchecked", "rawtypes" })
     public static <T> void main(String[] args) {
         // comparator y comparable
 
