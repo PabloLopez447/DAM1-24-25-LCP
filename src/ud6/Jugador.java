@@ -15,7 +15,7 @@ static boolean editarJugador(Map<Integer, Jugador> plantilla, Integer dorsal, Ju
 
  */
 
-package UD6.apuntescolecciones;
+package ud6;
 
 import java.util.HashMap;
 import java.util.Map;
