@@ -8,7 +8,7 @@ import java.io.*;
 public class AppNotas {
 
     public static void main(String[] args) {
-        String archivoEntrada = "notas.txt";
+        String archivoEntrada = "src/ud7/lomioxd/notas.txt";
         String archivoSalida = "promedios.txt";
 
         try (BufferedReader br = new BufferedReader(new FileReader(archivoEntrada));
